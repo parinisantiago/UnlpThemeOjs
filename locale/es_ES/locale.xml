@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<locale name="en_US" full_name="Español (España)">
+    <message key="plugins.themes.unlpBootstrap.name">Tema Bootstrap Unlp</message>
+    <message key="plugins.themes.unlpBootstrap.description">Tema de Bootstrap Unlp</message>
+</locale>
