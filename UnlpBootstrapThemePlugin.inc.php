@@ -5,8 +5,7 @@ import('lib.pkp.classes.plugins.ThemePlugin');
 class UnlpBootstrapThemePlugin extends ThemePlugin {
 
     public function init() {
-
-        $this->addStyle('bootstrap', 'styles/bootstrap.less');
+        $this->addStyle('bootstrap', 'styles/bootstrap-unlp.less');
 
         // Load jQuery from a CDN or, if CDNs are disabled, from a local copy.
         $min = Config::getVar('general', 'enable_minified') ? '.min' : '';
