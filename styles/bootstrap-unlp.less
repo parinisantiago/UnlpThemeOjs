@@ -1,19 +1,42 @@
+/**
+ * @file plugins/themes/bootstrap3/index.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University Library
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Bootstrap 3 theme stylesheet. This is the base styles that must be
+ *   included for any theme.
+ *
+ */
+
 @import "../bootstrap/less/bootstrap.less";
+
+.title{
+  margin: 0;
+}
+
+.pkp-logo img{
+  height: 130px;
+  width: auto;
+}
 
 // Collapse margins on the site name in the header
 .navbar-header .site-name {
   margin: 0;
 }
-
+.navbar-brand{
+  height: 130px;
+}
 // Resize the logo in the header
 .navbar-brand-logo img {
-  width: 10%;
   max-height: 100%;
+  width: auto;
 }
 
 // Set color of links in navbar
 .navbar-default .nav > li > a {
-  color: yellow;
+  color: @navbar-default-link-color;
 
   &:hover,
   &:focus,
