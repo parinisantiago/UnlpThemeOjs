@@ -36,35 +36,36 @@
 					{capture assign="url"}{url journal=$journal->getPath()}{/capture}
 					{assign var="thumb" value=$journal->getLocalizedSetting('journalThumbnail')}
 					{assign var="description" value=$journal->getLocalizedDescription()}
-					<li class="media">
+					<li class="media journal-content">
 						{if $thumb}
 							{assign var="altText" value=$journal->getLocalizedSetting('journalThumbnailAltText')}
 							<div class="media-left">
 								<a href="{$url|escape}">
-									<img class="media-object" src="{$journalFilesPath}{$journal->getId()}/{$thumb.uploadName|escape:"url"}"{if $altText} alt="{$altText|escape}"{/if}>
+									<img class="media-object journal-img" src="{$journalFilesPath}{$journal->getId()}/{$thumb.uploadName|escape:"url"}"{if $altText} alt="{$altText|escape}"{/if}>
 								</a>
 							</div>
 						{/if}
 
 						<div class="media-body">
+
 							<h3 class="media-heading">
 								<a href="{$url|escape}" rel="bookmark">
 									{$journal->getLocalizedName()}
 								</a>
 							</h3>
 							{if $description}
-								<div class="description">
+								<div class="col-md-10">
 									{$description|nl2br}
 								</div>
 							{/if}
-							<ul class="nav nav-pills">
+							<ul class="nav pull-right journal-buttons">
 								<li class="current journal-current">
-									<a href="{url|escape journal=$journal->getPath() page="issue" op="current"}">
-										{translate key="site.journalCurrent"}
+									<a class="text-center" href="{url|escape journal=$journal->getPath() page="issue" op="current"}">
+                                       <b> {translate key="site.journalCurrent"} </b>
 									</a>
 								</li>
 								<li class="view journal-view">
-									<a href="{$url|escape}">
+									<a class="text-center" href="{$url|escape}">
                                         {translate key="site.journalView"}
 									</a>
 								</li>
