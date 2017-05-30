@@ -20,8 +20,8 @@
 
 	<div class="journals">
 		<div class="page-header">
-			<h2>
-				{translate key="journal.journals"}
+			<h2 class="page-title">
+				<u>{translate key="plugins.themes.unlpBootstrap.siteTitle"}</u>
 			</h2>
 		</div>
 
@@ -58,14 +58,14 @@
 								</div>
 							{/if}
 							<ul class="nav nav-pills">
-								<li class="view">
-									<a href="{$url|escape}">
-										{translate key="site.journalView"}
-									</a>
-								</li>
-								<li class="current">
+								<li class="current journal-current">
 									<a href="{url|escape journal=$journal->getPath() page="issue" op="current"}">
 										{translate key="site.journalCurrent"}
+									</a>
+								</li>
+								<li class="view journal-view">
+									<a href="{$url|escape}">
+                                        {translate key="site.journalView"}
 									</a>
 								</li>
 							</ul>
