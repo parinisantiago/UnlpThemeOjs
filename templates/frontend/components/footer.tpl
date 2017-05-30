@@ -30,18 +30,24 @@
   	<div class="container">
 
       <div class="row">
+		  <div class="col-md-4 footer-logo">
+		  <p class="text-center"><a title="Proyecto de Enlace de Bibliotecas" href="http://prebi.unlp.edu.ar" target="_blank">PREBI</a>-<a title="Servicio de Difusión de la Creación Intelectual" href="http://sedici.unlp.edu.ar" target="_blank">SEDICI</a></p>
+			  <a href="http://sedici.unlp.edu.ar/">
+				  <img class="center-block" alt="sedici" src="{$baseUrl}/plugins/themes/unlp/templates/images/logo-sedici.png">
+			  </a>
+		  </div>
     		{if $pageFooter}
-        <div class="col-md-8">
+        <div class="col-md-4">
           {$pageFooter}
         </div>
     		{/if}
 
-    		<div class="col-md-4" role="complementary" aria-label="{translate|escape key="about.aboutThisPublishingSystem"}">
+    		<div class="col-md-4 footer-logo" role="complementary" aria-label="{translate|escape key="about.aboutThisPublishingSystem"}">
     			<a href="{url page="about" op="aboutThisPublishingSystem"}">
-    				<img alt="{translate key=$packageKey}" src="{$baseUrl}/{$brandImage}">
+					<p class="text-center">Powered by OJS | Open Journal Systems</p>
     			</a>
     			<a href="{$pkpLink}">
-    				<img alt="{translate key="common.publicKnowledgeProject"}" src="{$baseUrl}/lib/pkp/templates/images/pkp_brand.png">
+    				<img class="center-block" alt="{translate key="common.publicKnowledgeProject"}" src="{$baseUrl}/plugins/themes/unlp/templates/images/logo-pkp.png">
     			</a>
     		</div>
 
