@@ -86,7 +86,7 @@
 					</ul>
 				</div><!-- user navbar row -->
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-offset-2 col-md-4 img-nav">
                         {* Logo or site title. Only use <h1> heading on the homepage.
                            Otherwise that should go to the page title. *}
                         {if $requestedOp == 'index'}
@@ -100,11 +100,11 @@
                             {url|assign:"homeUrl" page="index" router=$smarty.const.ROUTE_PAGE}
                         {/if}
                         {if $displayPageHeaderLogo && is_array($displayPageHeaderLogo)}
-							<a href="{$homeUrl}" class="navbar-brand navbar-brand-logo">
+							<a href="{$homeUrl}" class="navbar-brand navbar-brand-logo img-nav">
 								<img src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}" {if $displayPageHeaderLogo.altText != ''}alt="{$displayPageHeaderLogo.altText|escape}"{else}alt="{translate key="common.pageHeaderLogo.altText"}"{/if}>
 							</a>
                         {else}
-							<a href="{$homeUrl}" class="navbar-brand navbar-brand-logo">
+							<a href="{$homeUrl}" class="navbar-brand navbar-brand-logo img-nav">
 								<img src="{$baseUrl}/plugins/themes/unlp/templates/images/logo-revistas.png" alt="{$applicationName|escape}" title="{$applicationName|escape}" />
 							</a>
                         {/if}
@@ -114,8 +114,8 @@
 							</div>
                     	{/if}
 					</div>
-					<div class="col-md-6">
-						<a href="" class="navbar-brand navbar-brand-logo pull-right">
+					<div class="col-xs-offset-7 col-md-offset-2 col-md-4">
+						<a href="" class="unlp-img navbar-brand navbar-brand-logo">
 							<img src="{$baseUrl}/plugins/themes/unlp/templates/images/logo-unlp.png">
 						</a>
 					</div>
@@ -125,4 +125,4 @@
 
 		{* Wrapper for page content and sidebars *}
 		<div class="pkp_structure_content container">
-			<main class="pkp_structure_main col-xs-12 col-sm-10 col-md-10 col-md-offset-1" role="main">
+			<main class="pkp_structure_main col-xs-12 col-sm-10 col-md-10 col-md-offset-2" role="main">
