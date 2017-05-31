@@ -86,7 +86,7 @@
 					</ul>
 				</div><!-- user navbar row -->
 				<div class="row">
-					<div class="col-md-offset-2 col-md-4 img-nav">
+					<div class="col-xs-3 col-sm-6 col-md-offset-2 col-md-4 img-nav">
                         {* Logo or site title. Only use <h1> heading on the homepage.
                            Otherwise that should go to the page title. *}
                         {if $requestedOp == 'index'}
@@ -114,7 +114,7 @@
 							</div>
                     	{/if}
 					</div>
-					<div class="col-xs-offset-7 col-md-offset-2 col-md-4">
+					<div class="col-xs-3 col-sm-6 col-md-offset-2 col-md-4">
 						<a href="" class="unlp-img navbar-brand navbar-brand-logo">
 							<img src="{$baseUrl}/plugins/themes/unlp/templates/images/logo-unlp.png">
 						</a>
