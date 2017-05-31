@@ -54,7 +54,7 @@
 								</a>
 							</h3>
 							{if $description}
-								<div class="col-md-10">
+								<div class="description col-xs-9 col-md-9">
 									{$description|nl2br}
 								</div>
 							{/if}
