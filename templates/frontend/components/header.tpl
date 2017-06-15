@@ -94,20 +94,9 @@
 						{else}
 							<div class="site-name">
 						{/if}
-                        {if $currentJournal && $multipleContexts}
-                            {url|assign:"homeUrl" journal="index" router=$smarty.const.ROUTE_PAGE}
-                        {else}
-                            {url|assign:"homeUrl" page="index" router=$smarty.const.ROUTE_PAGE}
-                        {/if}
-                        {if $displayPageHeaderLogo && is_array($displayPageHeaderLogo)}
 							<a href="{$homeUrl}" class="navbar-brand navbar-brand-logo img-nav">
-								<img src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}" {if $displayPageHeaderLogo.altText != ''}alt="{$displayPageHeaderLogo.altText|escape}"{else}alt="{translate key="common.pageHeaderLogo.altText"}"{/if}>
+								<img src="{$baseUrl}/plugins/themes/unlp/templates/images/revistas-logo.png" alt="{$applicationName|escape}" title="{$applicationName|escape}" />
 							</a>
-                        {else}
-							<a href="{$homeUrl}" class="navbar-brand navbar-brand-logo img-nav">
-								<img src="{$baseUrl}/plugins/themes/unlp/templates/images/logo-revistas.png" alt="{$applicationName|escape}" title="{$applicationName|escape}" />
-							</a>
-                        {/if}
                         {if $requestedOp == 'index'}
 							</h1>
                         {else}
